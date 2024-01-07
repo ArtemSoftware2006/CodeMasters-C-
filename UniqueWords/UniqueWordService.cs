@@ -6,7 +6,7 @@ namespace UniqueWords
         public async Task<HashSet<string>> FinduniqueWordFromFilesAsync(List<string> paths) 
         {
             HashSet<string> wordsSet = new HashSet<string>();
-            List<char> charsToRemove = new List<char>() { '@', '-', ',', '.', '?', '!', ':', ';', '\"' };
+            char[] charsToRemove = new char[] { '@', '-', ',', '.', '?', '!', ':', ';', '\"' };
 
             foreach (var path in paths)
             {
@@ -16,7 +16,7 @@ namespace UniqueWords
                     while((line = await streamReader.ReadLineAsync()) != null) 
                     {
                         line = line.Trim();
-                        line = String.Concat(line.Split(charsToRemove.ToArray()));
+                        line = String.Concat(line.Split(charsToRemove));
                         line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                             .ToList()
                             .ForEach(x => {

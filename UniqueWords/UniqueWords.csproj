@@ -13,10 +13,4 @@
     </Content>  
   </ItemGroup>
 
-  <!-- <Target Name="AfterBuild">
-    <Copy SourceFiles="$C:\Users\Artem\Desktop\Programs\Algorithms\C#\UniqueWords\Data\*" 
-      DestinationFolder="C:\Users\Artem\Desktop\Programs\Algorithms\C#\UniqueWords\bin\Debug\net7.0\Data" 
-      ContinueOnError="true" />
-  </Target> -->
-
 </Project>
